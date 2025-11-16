@@ -18,15 +18,31 @@
  *  @author Zach Blick
  */
 public class GenomeCompressor {
-
     /**
      * Reads a sequence of 8-bit extended ASCII characters over the alphabet
      * { A, C, T, G } from standard input; compresses and writes the results to standard output.
      */
     public static void compress() {
+        String s = BinaryStdIn.readString();
+        int n = s.length();
+
+        BinaryStdOut.write(n);
 
         // TODO: complete the compress() method
-
+        for (int i = 0; i < n; i++) {
+            if (s.charAt(i) == 'A') {
+                BinaryStdOut.write(0, 2);
+            }
+            else if (s.charAt(i) == 'C') {
+                BinaryStdOut.write(1, 2);
+            }
+            else if (s.charAt(i) == 'G') {
+                BinaryStdOut.write(2, 2);
+            }
+            else if (s.charAt(i) == 'T') {
+                BinaryStdOut.write(3, 2);
+            }
+        }
         BinaryStdOut.close();
     }
 
@@ -37,6 +53,22 @@ public class GenomeCompressor {
 
         // TODO: complete the expand() method
 
+
+        while (!BinaryStdIn.isEmpty()) {
+            int curr = BinaryStdIn.readInt(2);
+            if (curr == 0) {
+                BinaryStdOut.write('A');
+            }
+            else if (curr == 1) {
+                BinaryStdOut.write('C');
+            }
+            else if (curr == 2) {
+                BinaryStdOut.write('G');
+            }
+            else if (curr == 3) {
+                BinaryStdOut.write('T');
+            }
+        }
         BinaryStdOut.close();
     }
 

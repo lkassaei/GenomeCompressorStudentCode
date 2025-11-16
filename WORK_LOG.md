@@ -1,9 +1,10 @@
 Name: YOUR NAME HERE
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date    |    Time     |                                                                                                                                                                                                                                                                                                                            Update |
+|:--------|:-----------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Thur 13 |   9-10pm    |                                                                                                                                                                                                                           Mr. Blick introduced compression and decompression. I worked on Java terminal commands and piping data. |
+| Fri 14  |    2-3pm    |                                                I got the theory for this problem and completed the compress function. I realized the issue with my decompression function which was that I can't look at each char because each one stores 4 of our characters. Mr. Blick told me to use a while for this instead of my for-loop. |
+| Sat 15  | 4:30-5:30pm | I finished the decompress function by using a while loop and while the input wasn't empty I would check for my characters. I got a little confused and tried to decompress from the genomeTest file while resulted in a much larger thing, but realized I had to compress first and use the compressed file for my decompression. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
